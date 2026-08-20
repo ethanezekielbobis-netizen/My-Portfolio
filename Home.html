@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #020617, #0f172a, #082f49);
+            color: white;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ================= NAVIGATION ================= */
+
+        nav {
+            background: rgba(2, 6, 23, 0.9);
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #0ea5e9;
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+            text-shadow: 0 0 10px #38bdf8;
+        }
+
+        /* ================= NAME ================= */
+
+        body > h1 {
+            text-align: center;
+            font-size: 55px;
+            margin-top: 80px;
+            margin-bottom: 5px;
+            color: #38bdf8;
+            text-shadow:
+                0 0 10px #0ea5e9,
+                0 0 25px #0284c7;
+            animation: fadeDown 1s ease;
+        }
+
+        body > h2 {
+            text-align: center;
+            color: #bae6fd;
+            font-weight: normal;
+            margin-bottom: 60px;
+            animation: fadeUp 1.2s ease;
+        }
+
+        /* ================= INTRODUCTION ================= */
+
+        body > h3,
+        body > p {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        body > h3 {
+            font-size: 30px;
+            margin-top: 30px;
+            color: #38bdf8;
+        }
+
+        body > p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #dbeafe;
+        }
+
+        /* ================= HOBBIES ================= */
+
+        body > div {
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        body > div h2 {
+            font-size: 32px;
+            color: #38bdf8;
+            margin-bottom: 20px;
+        }
+
+        ol {
+            background: rgba(15, 23, 42, 0.8);
+            padding: 25px 45px;
+            border-radius: 15px;
+            border: 1px solid #0284c7;
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.2);
+        }
+
+        ol li {
+            padding: 12px;
+            font-size: 18px;
+            color: #e0f2fe;
+            transition: 0.3s;
+        }
+
+        ol li:hover {
+            transform: translateX(10px);
+            color: #38bdf8;
+            text-shadow: 0 0 10px #38bdf8;
+        }
+.voice-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.voice-section h1 {
+    color: #38bdf8;
+    text-shadow: 0 0 10px #0284c7;
+    margin-bottom: 10px;
+}
+
+.voice-section p {
+    color: #dbeafe;
+    margin-bottom: 20px;
+}
+
+.voice-section audio {
+    width: 500px;
+    max-width: 90%;
+}
+        /* ================= VIDEO ================= */
+
+        body > video {
+            display: block;
+            width: 500px;
+            max-width: 90%;
+            margin: 20px auto 50px;
+            border-radius: 15px;
+            border: 2px solid #0ea5e9;
+            box-shadow:
+                0 0 15px #0284c7,
+                0 0 35px rgba(14, 165, 233, 0.4);
+            transition: 0.4s;
+        }
+
+        body > video:hover {
+            transform: scale(1.03);
+            box-shadow:
+                0 0 25px #38bdf8,
+                0 0 50px rgba(14, 165, 233, 0.5);
+        }
+
+        /* ================= TITLES ================= */
+
+        body > h1:nth-of-type(2) {
+            text-align: center;
+            font-size: 32px;
+            margin-top: 50px;
+            color: #38bdf8;
+            text-shadow: 0 0 10px #0284c7;
+        }
+
+        /* ================= IMAGE ================= */
+
+        body > img {
+            display: block;
+            width: 500px;
+            height: 500px;
+            max-width: 90%;
+            object-fit: cover;
+            margin: 20px auto 50px;
+            border-radius: 20px;
+            border: 3px solid #0ea5e9;
+            box-shadow:
+                0 0 20px #0284c7,
+                0 0 40px rgba(14, 165, 233, 0.3);
+            transition: 0.5s;
+        }
+
+        body > img:hover {
+            transform: scale(1.05) rotate(1deg);
+            box-shadow:
+                0 0 30px #38bdf8,
+                0 0 60px rgba(14, 165, 233, 0.5);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #020617;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 70px;
+            border-top: 1px solid #0ea5e9;
+            box-shadow: 0 -5px 20px rgba(14, 165, 233, 0.2);
+        }
+
+        footer p {
+            color: #bae6fd;
+        }
+
+        /* ================= ANIMATIONS ================= */
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 700px) {
+
+            nav ul li {
+                margin: 0 8px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
+
+            body > h1 {
+                font-size: 38px;
+            }
+
+            body > h3,
+            body > p {
+                width: 90%;
+            }
+
+            body > h3 {
+                font-size: 25px;
+            }
+
+            body > div {
+                width: 90%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="aboutme.html">About Me</a>
+            </li>
+
+            <li>
+                <a href="Contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- NAME -->
+
+    <h1>Ethan Ezekiel S. Bobis</h1>
+
+    <h2>10 Sapphire</h2>
+
+
+    <!-- INTRODUCTION -->
+
+    <h3>Hi, I'm Ethan!</h3>
+
+    <p>
+        Welcome to my personal portfolio. I'm a student who enjoys
+        exploring new things and spending time on my hobbies.
+    </p>
+
+
+    <!-- HOBBIES -->
+
+    <div>
+
+        <h2>My Hobbies</h2>
+
+        <ol>
+
+            <li>🎮 Playing games</li>
+
+            <li>🎵 Listening to music</li>
+
+            <li>🎬 Watching movies</li>
+
+            <li>💻 Learning about technology</li>
+
+        </ol>
+
+    </div>
+	
+	<!-- MY VOICE RECORDING -->
+
+<section class="voice-section">
+
+    <h1>🎙️ My Friend Voice</h1>
+
+    <p>Listen to my Friend voice recording:</p>
+
+    <audio controls>
+        <source src="Screen Recording 2026-08-20 172941.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+</section>
+
+
+    <!-- VIDEO -->
+
+    <h1>My Favorite Clip in Valorant</h1>
+
+    <video controls>
+
+        <source src="XJtdS6DKV4dJ7XGrSsNT4dh.mp4" type="video/mp4">
+
+        Your browser does not support the video tag.
+
+    </video>
+
+
+    <!-- IMAGE -->
+
+    <h1>This is Me</h1>
+
+    <img src="image.png" alt="A photo of me">
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 My Personal Portfolio
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

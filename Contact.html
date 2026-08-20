@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #020617, #0f172a, #082f49);
+            color: white;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: rgba(2, 6, 23, 0.9);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #0ea5e9;
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        header h1 {
+            margin: 0 0 15px;
+            color: #38bdf8;
+            font-size: 30px;
+            text-shadow:
+                0 0 10px #0ea5e9,
+                0 0 20px #0284c7;
+        }
+
+        /* ================= NAVIGATION ================= */
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+            text-shadow: 0 0 10px #38bdf8;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            text-align: center;
+            padding: 90px 20px;
+            min-height: 600px;
+            animation: fadeUp 1s ease;
+        }
+
+        .contact h2 {
+            font-size: 50px;
+            color: #38bdf8;
+            margin-bottom: 20px;
+            text-shadow:
+                0 0 10px #0ea5e9,
+                0 0 25px #0284c7;
+        }
+
+        .contact > p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+            color: #dbeafe;
+        }
+
+        /* ================= CONTACT CARD ================= */
+
+        .contact-info {
+            background: rgba(15, 23, 42, 0.85);
+            max-width: 600px;
+            margin: 45px auto;
+            padding: 35px;
+            border-radius: 18px;
+            border: 1px solid #0284c7;
+            box-shadow:
+                0 0 20px rgba(14, 165, 233, 0.2);
+            text-align: left;
+            transition: 0.4s;
+        }
+
+        .contact-info:hover {
+            transform: translateY(-8px);
+            border-color: #38bdf8;
+            box-shadow:
+                0 0 25px #0284c7,
+                0 0 50px rgba(14, 165, 233, 0.3);
+        }
+
+        .contact-info p {
+            margin: 20px 0;
+            padding: 12px;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+            font-size: 18px;
+            color: #dbeafe;
+            transition: 0.3s;
+        }
+
+        .contact-info p:hover {
+            padding-left: 20px;
+            color: #38bdf8;
+        }
+
+        .contact-info strong {
+            color: #38bdf8;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background-color: #020617;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #0ea5e9;
+            box-shadow:
+                0 -5px 20px rgba(14, 165, 233, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+            color: #bae6fd;
+        }
+
+        /* ================= ANIMATION ================= */
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 18px;
+            }
+
+            nav ul li {
+                margin: 0 8px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
+
+            .contact {
+                padding: 60px 15px;
+            }
+
+            .contact h2 {
+                font-size: 38px;
+            }
+
+            .contact-info {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>My Portfolio</h1>
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="Home.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="aboutme.html">About Me</a>
+                </li>
+
+                <li>
+                    <a href="Contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTACT -->
+
+    <main class="contact">
+
+        <h2>Contact Me</h2>
+
+        <p>
+            If you would like to get in touch with me,
+            you can contact me through the information below.
+        </p>
+
+
+        <div class="contact-info">
+
+            <p>
+                <strong>👤 Name:</strong>
+                Ethan
+            </p>
+
+            <p>
+                <strong>📧 Email:</strong>
+                ethanezekielbobis@gmail.com
+            </p>
+
+            <p>
+                <strong>📘 Facebook:</strong>
+                Ezekiel Ethan
+            </p>
+
+            <p>
+                <strong>📸 Instagram:</strong>
+                _ezklethan
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 My Personal Portfolio
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Me</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #020617, #0f172a, #082f49);
+            color: white;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ================= NAVIGATION ================= */
+
+        header {
+            background: rgba(2, 6, 23, 0.9);
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #0ea5e9;
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        header h1 {
+            margin-bottom: 15px;
+            color: #38bdf8;
+            font-size: 30px;
+            text-shadow: 0 0 12px #0284c7;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+            text-shadow: 0 0 10px #38bdf8;
+        }
+
+        /* ================= ABOUT SECTION ================= */
+
+        .about-me {
+            text-align: center;
+            padding: 90px 20px;
+            min-height: 550px;
+            animation: fadeUp 1s ease;
+        }
+
+        .about-me h2 {
+            font-size: 50px;
+            color: #38bdf8;
+            margin-bottom: 50px;
+            text-shadow:
+                0 0 10px #0ea5e9,
+                0 0 25px #0284c7;
+        }
+
+        /* ================= CARDS ================= */
+
+        .about-card {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 35px;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid #0284c7;
+            border-radius: 18px;
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.2);
+            transition: 0.4s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-8px);
+            border-color: #38bdf8;
+            box-shadow:
+                0 0 25px #0284c7,
+                0 0 45px rgba(14, 165, 233, 0.3);
+        }
+
+        .about-card h3 {
+            font-size: 30px;
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .about-card p {
+            font-size: 18px;
+            color: #dbeafe;
+            line-height: 1.8;
+        }
+
+        /* ================= ICONS ================= */
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background-color: #020617;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #0ea5e9;
+            box-shadow: 0 -5px 20px rgba(14, 165, 233, 0.2);
+        }
+
+        footer p {
+            color: #bae6fd;
+        }
+
+        /* ================= ANIMATIONS ================= */
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes float {
+
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 18px;
+            }
+
+            nav ul li {
+                margin: 0 8px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
+
+            .about-me {
+                padding: 60px 15px;
+            }
+
+            .about-me h2 {
+                font-size: 38px;
+            }
+
+            .about-card {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>My Portfolio</h1>
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="Home.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="aboutme.html">About Me</a>
+                </li>
+
+                <li>
+                    <a href="Contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ABOUT ME -->
+
+    <main class="about-me">
+
+        <h2>About Me</h2>
+
+
+        <!-- INTEREST -->
+
+        <div class="about-card">
+
+            <div class="icon">💻</div>
+
+            <h3>My Interest</h3>
+
+            <p>
+                I am interested in technology, computers, music,
+                and learning new skills.
+            </p>
+
+        </div>
+
+
+        <!-- GOAL -->
+
+        <div class="about-card">
+
+            <div class="icon">🎯</div>
+
+            <h3>My Goal</h3>
+
+            <p>
+                My goal is to continue learning, improve my skills,
+                and become better at the things I enjoy.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 My Personal Portfolio
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
